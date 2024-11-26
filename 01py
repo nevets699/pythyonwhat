@@ -1,0 +1,66 @@
+""" EJERCICIO:
+ * - Crea ejemplos utilizando todos los tipos de operadores de tu lenguaje:
+ *   Aritméticos, lógicos, de comparación, asignación, identidad, pertenencia, bits...
+ *   (Ten en cuenta que cada lenguaje puede poseer unos diferentes)
+ * - Utilizando las operaciones con operadores que tú quieras, crea ejemplos
+ *   que representen todos los tipos de estructuras de control que existan
+ *   en tu lenguaje:
+ *   Condicionales, iterativas, excepciones...
+ * - Debes hacer print por consola del resultado de todos los ejemplos."""
+
+a = 20
+b= 50
+
+# Suma 
+
+suma = a + b
+print (suma)
+
+# Resta
+
+resta = b - a 
+print (resta)
+
+# Multiplicación
+
+multiplicación = a * b
+print (multiplicación)
+
+# División
+
+división = a / b
+print (división)
+
+# Exponenciación
+
+exponente = a ** b
+print (exponente)
+
+# División entera
+
+c = 10
+d = 3
+
+división_entera = c // d
+print (división_entera)
+
+""""Ejemplo: 
+    Determinar que operadores son divisibles entre 2 o multiplos de ellos, tambien confirmar si son
+    mayores o iguales que 5
+"""
+resultados = [suma, resta, multiplicación, división, exponente, división_entera]
+
+for resultado in resultados:
+    if resultado % 2 == 0 and resultado >= 5:
+        print (f"{resultado} es divisible entre 2 y mayor igual que 5")
+    else: 
+        print (f"{resultado} no cumple las condiciones")
+
+# Código int en rango de 10 a 55
+
+""""Crea un programa que imprima por consola todos los números comprendidos 
+* entre 10 y 55 (incluidos), pares, y que no son ni el 16 ni múltiplos de 3."""
+
+for i in range(10, 56):
+    if i % 2 == 0 and i != 16 and i % 3 != 0:
+        print(i)
