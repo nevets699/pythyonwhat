@@ -1,13 +1,23 @@
-# Haciendo un programa en el que insertes un caracter y te lo devuelva con +1
+# Solicitar valores para A y B
+a = int(input("Introduzca un valor para a ->"))
+b = int(input("Introduzca un valor para b ->"))
 
-def get_char():
-    return input("Introduce un carácter: ")[0] 
+# Operaciones lógicas
+operacion1 = (3+5*8) < 3
+operacion2 = ((-6/3*4) + 2 < 2)
+operacion3 = a > b
 
-# Obtener el primer carácter de la entrada
-def main():
-    char = get_char
-    next_char =chr(ord(char)+ 1)
-    print(f"El siguiente carácter es: {next_char}")
+# Calcular resultado
+resultado = operacion1 and operacion2 or operacion3
 
-if __name__ == "__main__":
-    main()
+# Imprimir resultado
+print(f"El resultado es: {resultado}")
+
+# Otra manera de escribir el mismo código
+
+a = float(input("a ->"))
+b = float(input("b ->"))
+
+resultado = ((3+5*8)<3 and (-6/3*4)+2<2) or (a>b)
+
+print(f"El resultado es: {resultado}")

@@ -82,8 +82,14 @@ print(f"Menor o igual que: 10 <= 3 es {10 <= 3}")
 
 # Operadores lógicos
 print(f"And &&: 10 + 3 == 13 and 5 - 1 == 4 es {10 + 3 == 13 and 5 - 1 == 4}")
-print(f"Or ||: 10 + 3 == 13 or 5 - 1 == 4 es {10 + 3 == 13 or 5 - 1 == 4}")
-print(f"Not !!: 10 + 3 == 14 es {not 10 + 3 == 14} (Devuelve True lo negativo)")
+print(f"Or ||: 10 + 3 == 13 or 5 - 1 == 6 es {10 + 3 == 13 or 5 - 1 == 6}")
+print(f"Not !!: 10 + 3 == 14 es {not 10 + 3 == 14} (Devuelve True lo falso")
+
+"""Prioridad de estos:
+1. Not
+2. And
+3. Or
+"""
 
 # Operadores de asignación
 my_number = 11 #asignado
