@@ -184,3 +184,271 @@ print(lista[-4]) # Martes
 print(lista[0:2]) #De lunes a miercoles
 
 # End | 29 / 11 / 2024
+
+print(len(lista))
+
+lista = [1, 2, 4, 5]
+lista.append(6)
+lista.append("Alejandro")
+
+# Agregar un 3 en la lista, pero en el medio
+lista.insert(2, 3)
+lista.extend([6, 7, 8])
+print(lista)
+lista1 = [1, 2, 3, 4, 5]
+lista2 = [6, 7, 8]
+
+lista3 = lista1 + lista2
+print(lista3)
+
+# Asking questions in the list
+
+lista = [1, 2, 3, 4, 5, "Alejandro"]
+
+print(3 in lista)
+print("Alejandro" in lista)
+print(lista.index(3))
+
+lista = [1, 2, 3, 4, 5 ,6, "Abraham", 1, 2 ,3 ,4 ,5 ,6, 1]
+print(lista.count(1)) # Cuenta los números en la lista
+print(lista.find(2)) # Encuentra en que índice está el número pedido
+lista.pop(1) # Elimina el número pedido
+lista.remove(5) # Elimina los números sin saber la posición
+
+lista = [1, 2, 3, 4, 5, "Alejandro"]*2 # Multiplica la lista por 2
+lista = [-1, 0 , -7, 10, 250, -80] 
+print(lista.sort()) # Queda ordenada de menos al mayor
+print(lista.sort(reverse=True)) # Quedan ordenados de menor
+
+# Cap 27 | Tuplas
+
+tupla = (4, "Hola", 6.78, [1, 2, 3]) 
+print(tupla[1:5])
+print(4 in tupla) # Devuelve True o False, ocupa la funcion de buscar
+print(tupla.count(6.78))
+
+# Transformar de tupla a una lista
+lista = list(tupla)
+print(lista)
+
+# O viceversa
+lista = [4, "Hola", 6.78, [1, 2, 3]]
+tupla = tuple(lista)
+print(tupla)
+
+# Cap 28 | Conjuntos
+
+conjunto = set()
+conjunto = {1, 2, 3, "Hola", 4.56}
+conjunto.add(5) # Agrega el caracter en cualquier lado de la lista
+conjunto.add("Adios")
+conjunto.discard("Hola") # Elimina de la lista
+conjunto.clear() #Limpia todo
+print(conjunto)
+
+# Buscar números dentro del conjunto
+
+print(3 in conjunto) #True or False
+print(3 not in conjunto)
+
+# Cap 29 | Conjuntos
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+c= a | b # Todos los elementos
+d = a & b # Repetición de los 2
+e = a - b # Todos menos B, ni la unión
+f = a ^ b # Diferencia simétrica, todo menos lo repetido
+
+g = {1, 2, 3, 4, 5} # Esto convierte que a y b sean subconjuntos de g, para que devuelva True tiene que tener todos los elementos
+print (a == b) # False
+print(a.issubset(g)) #  True
+
+print(a.isdisjoint(b)) # Preguntas si comparten algún elemento entre conjuntos, en este caso a y b comparten el 3, por eso devuelve False
+
+a = frozenset({1, 2, 3}) # Frozenset convierte inmutable, no lo podemos modificar el conjunto, no se puede usar a.add() ni nada
+
+# Cap 30 | Coleeciones, Diccionarios
+
+diccionario = {"azul":"blue", "rojo":"red", "verde":"green"}
+diccionario["azul"] = "AZUL"
+diccionario["yellow"] = "yellow" # Agregar o actualizar la lista
+del(diccionario["verde"])
+
+diccionario = {"Alejandro":[22, 1.73], "José": [22, 1.75], "Martín":[22, 1.77]}
+print(diccionario["Alejandro"]) # Todo valor de Alejandro
+print(diccionario)
+
+# Cap 31 | Colecciones, diccionarios 2
+
+equipo = {10:"Paulo Dybala", 11:"Tuplas Costa", 7:"Cristiano Ronaldo", 17:"Mario Mandzukic"} #  Tupla, no modificable
+
+print(equipo[10])
+print(equipo.get(6, "No existe un jugador con ese dorsal")) # Si no encuentra, lanza la 2da opción
+print(10 in equipo)
+print(11 in equipo)
+print(equipo.keys()) # Muestra solo claves
+print(equipo.values()) # Muestra las valores de las claves
+print(equipo.items()) # Muestra los 2
+
+equipo.clear() # Eliminar todo el diccionario
+print(equipo)
+
+# Cap 32 | Colescciones,  Pilas (Con listas)
+"""Pilas es una estructura de dato"""
+# Agregando elementos por el final
+pila = [1,2,3]
+
+# Agregando elementos por el final
+pila.append(4)
+pila.append(5)
+
+# Sacar elementos por el final
+n = pila.pop()
+print(f"Sacando el elemento {n}")
+n = pila.pop()
+print(f"Sacando el elemento {n}")
+n = pila.pop()
+print(f"Sacando el elemento {n}")
+
+print(pila)
+
+# Cap 33 | Colas
+
+cola = ["Maria", "Alejandro", "José", "Mario"]
+
+# Agregamos elementos al final de la cola
+cola.append("Karla")
+cola.append("Flor")
+print(cola)
+
+# Sacando elementos por el principio de la cola
+n = cola.pop(0)
+print(f"La primera en ser atendida será {n}")
+n = cola.pop(0)
+print(f"La primera en ser atendida será {n}")
+n = cola.pop(0)
+print(f"La primera en ser atendida será {n}")
+n = cola.pop(0)
+print(f"La primera en ser atendida será {n}")
+
+print(cola)
+
+# Cap 34 | Colecciones
+
+"""Escriba un programa  donde tenga una lista y que, a continuación, elimine los elementos repetidos, 
+por último mostrar la lista"""
+
+lista = [1, 2, 2, 3, 3, 4, 5, 15, "Abraham", 3]
+
+conjunto = set(lista)
+
+lista = list(conjunto)
+print(lista)
+
+# Otra forma de 1 línea de código
+
+lista = list(set(lista))
+print(lista)
+
+# Cap 35 | Ejercicio 2
+
+"""Escriba un programa que tenga dos listas y que, a continuación, cree las siguientes listas: (En las que no debe haber repeticiones)
+- Lista de palabras que aparecen en las dos listas.
+- Lista de palabras que aparecen en la primera lista, pero no en la segunda.
+- Lista de palabras que aparecen en la segunda lista, pero no en la primera.
+- Lista de palabras que aparecen en ambas listas."""
+
+lista1 = {1, 2, 3, 4, 5, 4, 3, 2, 2, 1, 5}
+lista2 = {3, 4, 5, 6, 8, 4, 7, 7, 8, 3, 4}
+
+print(f"Los elementos que aparecen en las 2 listas son: {lista1 & lista2}")
+print(f"Los elementos que aparecen en la primera lista pero no en la segunda son: {lista1 - lista2}")
+print(f"Los elementos que aparecen en la segunda lista pero no en la primera son: {lista1 - lista2}")
+print(f"Los elementos que aparecen en la ambas listas son:: {lista1 & lista2}")
+
+# La forma correcta:
+
+lista1 = {1, 2, 3, 4, 5, 4, 3, 2, 2, 1, 5}
+lista2 = {3, 4, 5, 6, 8, 4, 7, 7, 8, 3, 4}
+
+# Eliminar los elementos repetidos
+conjunto1 = set(lista1)
+conjunto2 = set(lista2)
+
+print(f"Los elementos que aparecen en las 2 listas son: {conjunto1 & conjunto2}")
+print(f"Los elementos que aparecen en la primera lista pero no en la segunda son: {conjunto1 - conjunto2}")
+print(f"Los elementos que aparecen en la segunda lista pero no en la primera son: {conjunto2 - conjunto1}")
+print(f"Los elementos que aparecen en la ambas listas son:: {conjunto1 | conjunto2}")
+
+# Cap 36 | Colecciones
+
+"""Escriba un programa donde cree una lista con los siguientes personajes del Señor de los anillos"""
+
+personajes = []
+p = {"Nombre":"Aragorn", "Clase":"Guerrero","Raza":"Dúnadan del Norte"}
+personajes.append(p) # Agregamos a la lista el personaje
+
+p = {"Nombre": "Gandalf", "Clase":"Mago", "Raza":"Istar"}
+personajes.append(p)
+
+p = {"Nombre": "Legolas", "Clase":"Arquero", "Raza":"Elfo"}
+personajes.append(p)
+
+print(personajes)
+
+# Cap 37 | Bucles 
+
+import math
+
+# Solicitar un número al usuario
+numero = int(input("Digite un número: "))
+
+# Verificar si el número es negativo
+while numero < 0:
+    print("Error, debería ser un número positivo")
+    numero = int(input("Digite un número: "))
+
+# Calcular la raíz cuadrada
+print(f"\nSu raíz cuadrada es: {(math.sqrt(numero)):.2f}")
+
+# While como bucle
+i = 0
+
+while i < 10:
+    print(i)
+    i += 1
+
+# Cap 38 | Bucle for, qepd
+
+coleccion = [2, 10, 3, 4, "Alejandro"]
+
+for i in coleccion:
+    print(f"Elemento {i}")
+    
+#Creamos un diccionario
+diccionario = {"Alejandro":22, "Maria":23, "José":45, "Luis":12}
+
+# Queremos las edades
+for i in diccionario:
+    print(f"{diccionario[i]}")
+
+# Queremos los nombres
+for i in diccionario:
+    print(f"Los nombres de la lista son: {i}")
+
+# Queremos los 2, nombre y edades
+for i in diccionario:
+    print(f"{i} - Su edad es de: {diccionario[i]}")
+
+for clave,valor in diccionario.items():
+    print(f"{clave} - {valor}")
+
+coleccion = "Alejandro"
+
+for i in coleccion:
+    print(f"{i}", end="") # El end cambia que el enter se convierta en espacio
+
+# End
+
